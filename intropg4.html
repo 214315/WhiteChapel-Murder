@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> WhiteChapel Murder </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+void setup()
+{
+	
+	size( 1000,800 );
+	frameRate( 30 );
+	
+    destination = loadImage("images/destination.png");
+    
+}
+
+
+
+void draw()
+{
+	background(0,0,0);
+	
+	image(destination,50,100,900,600);
+	
+	fill(255,0,0);
+	text("You arrived the appointed destination, waiting for Professor James.",480,160); 
+	text("Instead, his valet invited you into the house and guided into a room among all rooms.",480,180);
+	
+	if (mousePressed == true && mouseButton == LEFT)
+    {
+        if(mouseX > 0 && mouseX < 1000 &&
+        	mouseY > 0 && mouseY < 800)
+        {
+			link("pb1.html");
+		}
+
+    }
+	
+	
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+<body>
+</body>
+</html>

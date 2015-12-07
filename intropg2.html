@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> WhiteChapel Murder </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+void setup()
+{
+	
+	size( 1000,800 );
+	frameRate( 30 );
+	
+    invitation = loadImage("images/invitation.png");
+    
+}
+
+
+
+void draw()
+{
+	background(0,0,0);
+	
+	fill(255,255,255);
+	text("A scream broke the silence of the Berner Street.",30,60);
+	text("The policemen from the Scotland Yard rushed the Dutfield’s Yard at the Berner Street.",30,80)
+	text("They found the body laying down on the ground, filling the atmosphere with the blood stench.",30,100)
+	text("The policemen looked at each other, thinking about him.",30,120) 
+	text("'He appeared again.' one of the policemen was trying to calm his shaky voice. 'Jacky the Ripper appeared again...'",30,140);
+	text("'I will find Sherlock Holmes. I will find him.' Another policemen escaped the scene as quick as possible as if it was hell.",30,180);
+	text("Jack the Ripper, the infamous murderer, was always wanted by the Scotland Yard. Sherlock Holme -- that is you -- began the journey to investigate the mystery of Jack the Ripper.",30,200);
+	
+	image(invitation,80,250,500,300);
+	
+	if (mousePressed == true && mouseButton == LEFT)
+    {
+        if(mouseX > 80 && mouseX < 80+500 &&
+        	mouseY > 250 && mouseY < 250+300)
+        {
+			link("intropg3.html");
+		}
+
+    }
+	
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+<body>
+</body>
+</html>

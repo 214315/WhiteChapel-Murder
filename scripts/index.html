@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> Lab 5 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+PImage icecream;
+PImage guitar;
+PImage rainbow;
+
+void setup()
+{
+
+
+size( 500,500 );
+
+frameRate( 30 );
+
+
+}
+
+
+void draw()
+{
+	background(0,0,0);
+
+	fill(0,255,255);
+	rect(50,150,200,100);
+
+
+	text(mouseX,10,10);
+	text(mouseY,50,10);
+        
+    if (mousePressed == true && mouseButton == LEFT)
+    {
+        if (mouseX > 50 && mouseX < 50+200 &&
+            mouseY > 150 && mouseY < 150+100)
+        {
+		    text("Hello",50,400); 
+        }
+        
+    }
+    
+    
+    
+}
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
