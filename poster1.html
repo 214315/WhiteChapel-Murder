@@ -4,13 +4,15 @@
 <script src="scripts/processing.js"></script>
 <script type="text/processing" data-processing-target="mycanvas">
 
+PImage poster1;
+
 void setup()
 {
 	
-	size( 1000,800 );
+	size( 1000,1000 );
 	frameRate( 30 );
 	
-    Letter = loadImage("images/Letter.png");
+    poster1 = loadImage("images/poster1.png");
     
 }
 
@@ -20,17 +22,18 @@ void draw()
 {
 	background(0,0,0);
     	
-	image(Letter,90,150,800,550);
-	
+	image(poster1,70,0,800,1000);
+
 	if (mousePressed == true && mouseButton == LEFT)
     {
-        if(mouseX > 90 && mouseX < 90+800 &&
-        	mouseY > 150 && mouseY < 150+550)
+        if(mouseX > 0 && mouseX < 1560 &&
+        	mouseY > 0 && mouseY < 1940)
         {
 			link("pb1.html");
 		}
 
     }
+
 }
 </script>
 <canvas id="mycanvas"></canvas>
